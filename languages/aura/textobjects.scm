@@ -1,5 +1,5 @@
 (fn_decl
-  body: (block
+  (block
     "{"
     (_)* @function.inside
     "}")) @function.around

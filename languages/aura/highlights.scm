@@ -15,9 +15,6 @@
   "false"
 ] @boolean
 
-; Null literal
-(null) @constant.builtin
-
 ; Type keywords
 [
   "union"
@@ -45,13 +42,21 @@
 ; Type identifiers (PascalCase)
 (type_identifier) @type
 
-; Function calls
+; Function calls - first identifier child
 (call_expression
-  function: (identifier) @function)
+  (identifier) @function)
 
 ; Function definitions
 (fn_decl
-  name: (identifier) @function)
+  (identifier) @function)
+
+; Macro definitions
+(macro_decl
+  (identifier) @function)
+
+; Type definitions
+(def_decl
+  (identifier) @type)
 
 ; Parameters
 (parameter
@@ -99,10 +104,10 @@
 ; Dot identifiers (variant constructors)
 (dot_identifier) @variant
 
-; Named arguments
+; Named arguments - first identifier
 (named_argument
-  name: (identifier) @property)
+  (identifier) @property)
 
-; Field access
+; Field access - last identifier
 (field_access
-  field: (identifier) @property)
+  (identifier) @property)
