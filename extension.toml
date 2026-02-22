@@ -2,7 +2,7 @@ id = "aura"
 name = "Aura"
 version = "0.1.0"
 schema_version = 1
-authors = ["Nahharris <nahharris@example.com>"]
+authors = ["Hannah Harrisonn <hannah@harrisonn.dev>"]
 description = "Aura language support for Zed"
 repository = "https://github.com/nahharris/aura-zed"
 
