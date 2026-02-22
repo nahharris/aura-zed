@@ -16,7 +16,7 @@
 ] @boolean
 
 ; Null literal
-"null" @constant.builtin
+(null) @constant.builtin
 
 ; Type keywords
 [
