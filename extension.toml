@@ -8,4 +8,4 @@ repository = "https://github.com/nahharris/aura-zed"
 
 [grammars.aura]
 repository = "https://github.com/nahharris/tree-sitter-aura"
-rev = "main"
+rev = "084596da462974218545e319acbf7b18b52e7a77"
