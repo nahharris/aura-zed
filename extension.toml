@@ -1,0 +1,11 @@
+id = "aura"
+name = "Aura"
+version = "0.1.0"
+schema_version = 1
+authors = ["Nahharris <nahharris@example.com>"]
+description = "Aura language support for Zed"
+repository = "https://github.com/nahharris/aura-zed"
+
+[grammars.aura]
+repository = "https://github.com/nahharris/tree-sitter-aura"
+rev = "main"
