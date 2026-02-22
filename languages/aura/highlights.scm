@@ -2,29 +2,11 @@
 [
   "let"
   "const"
-  "fn"
-  "type"
-  "macro"
-  "def"
   "defn"
   "defmacro"
+  "def"
   "pub"
   "use"
-  "return"
-  "break"
-  "continue"
-  "if"
-  "else"
-  "cases"
-  "loop"
-  "while"
-  "do"
-  "then"
-  "finally"
-  "enum"
-  "union"
-  "interface"
-  "template"
 ] @keyword
 
 ; Boolean literals
@@ -38,19 +20,11 @@
 
 ; Type keywords
 [
-  "Int"
-  "Float"
-  "Bool"
-  "String"
-  "Void"
-  "List"
-  "Dict"
+  "union"
+  "enum"
+  "interface"
   "Func"
-  "Option"
-  "Result"
-  "Iterable"
-  "any"
-] @type.builtin
+] @keyword
 
 ; Comments
 (comment) @comment
@@ -81,7 +55,7 @@
 
 ; Parameters
 (parameter
-  name: (identifier) @variable.parameter)
+  (identifier) @variable.parameter)
 
 ; Operators
 [
@@ -104,9 +78,6 @@
   "?."
   "?:"
   "!!"
-  "++"
-  "--"
-  "~"
   ":"
 ] @operator
 
@@ -120,7 +91,6 @@
   "}"
   ","
   ";"
-  "."
 ] @punctuation
 
 ; Atoms (scope labels)
@@ -129,26 +99,10 @@
 ; Dot identifiers (variant constructors)
 (dot_identifier) @variant
 
-; Attributes
-[
-  "pub"
-] @attribute
-
-; Property access
-(field_access
-  field: (identifier) @property)
-
 ; Named arguments
 (named_argument
   name: (identifier) @property)
 
-; Struct fields
-(struct_field
-  name: (identifier) @property)
-
-; Type parameters
-(type_parameters
-  (identifier) @type)
-
-; Match arm guard
-(guard) @operator
+; Field access
+(field_access
+  field: (identifier) @property)

@@ -4,7 +4,7 @@
     (_)* @function.inside
     "}")) @function.around
 
-(closure
+(block
   "{"
   (_)* @function.inside
   "}") @function.around
