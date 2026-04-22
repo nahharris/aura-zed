@@ -1,6 +1,6 @@
 # Aura Zed Extension
 
-Syntax highlighting support for the [Aura](https://github.com/nahharris/aura) programming language in [Zed](https://zed.dev).
+Syntax highlighting support for [Aura](https://github.com/nahharris/aura) source files and AUON manifests in [Zed](https://zed.dev).
 
 ## Installation
 
@@ -20,10 +20,10 @@ Syntax highlighting support for the [Aura](https://github.com/nahharris/aura) pr
 
 ## Features
 
-- Syntax highlighting
+- Syntax highlighting for `.aura` and `.auon`
 - Bracket matching
 - Auto-indentation
-- Code outline (functions, definitions, macros)
+- Code outline for functions, defs, macros, and AUON root fields
 
 ## License
 

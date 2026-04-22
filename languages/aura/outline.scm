@@ -1,5 +1,8 @@
-(fn_decl (identifier) @name) @item
+(function_declaration
+  name: (identifier) @name) @item
 
-(def_decl (identifier) @name) @item
+(assignment_declaration
+  name: (identifier) @name) @item
 
-(macro_decl (identifier) @name) @item
+(macro_declaration
+  name: (identifier) @name) @item

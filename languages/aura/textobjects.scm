@@ -1,10 +1,16 @@
-(fn_decl
-  (block
+(function_declaration
+  (block_expression
     "{"
     (_)* @function.inside
     "}")) @function.around
 
-(block
+(macro_declaration
+  (block_expression
+    "{"
+    (_)* @function.inside
+    "}")) @function.around
+
+(block_expression
   "{"
   (_)* @function.inside
   "}") @function.around

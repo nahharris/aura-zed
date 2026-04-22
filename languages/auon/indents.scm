@@ -1,7 +1,7 @@
-(block_expression "}" @end) @indent
-(multi_arm_expression "}" @end) @indent
 (list_expression "]" @end) @indent
 (dict_expression "]" @end) @indent
 (tuple_expression ")" @end) @indent
 (struct_expression ")" @end) @indent
-(function_declaration (block_expression "}" @end) @indent)
+(root_struct @indent)
+(root_dict @indent)
+(root_list @indent)
