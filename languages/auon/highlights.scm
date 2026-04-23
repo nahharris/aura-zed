@@ -10,6 +10,9 @@
 (dot_identifier
   name: (identifier) @variant)
 
+(auon_dot_identifier
+  name: (identifier) @variant)
+
 (struct_field
   name: (identifier) @property)
 

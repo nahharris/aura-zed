@@ -43,6 +43,9 @@
 (struct_field
   name: (identifier) @property)
 
+(struct_pattern_field
+  name: (identifier) @property)
+
 (use_field
   local: (identifier) @variable)
 
