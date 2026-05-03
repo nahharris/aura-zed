@@ -2,19 +2,23 @@
 (string) @string
 (string_content) @string
 (escape_sequence) @string.escape
-(char) @string.special
 (integer) @number
 (float) @number
-(alias_value) @constant
 
 (dot_identifier
-  name: (identifier) @variant)
+  (identifier) @variant)
 
-(auon_dot_identifier
-  name: (identifier) @variant)
+(variant_pattern
+  (dot_identifier) @variant)
 
-(struct_field
-  name: (identifier) @property)
+(struct_field_type
+  (identifier) @property)
+
+(field_init
+  (identifier) @property)
+
+(struct_pattern_field
+  (identifier) @property)
 
 [
   "="

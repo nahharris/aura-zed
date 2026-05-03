@@ -4,62 +4,76 @@
 (string_content) @string
 (escape_sequence) @string.escape
 (interpolation) @embedded
-(char) @string.special
 (integer) @number
 (float) @number
-(alias_value) @constant
 
 ; Symbols
-(function_declaration
-  name: (identifier) @function)
+(def_fn_decl
+  (identifier) @function)
 
-(macro_declaration
-  name: (identifier) @function)
+(macro_decl
+  (identifier) @function)
 
-(assignment_declaration
-  name: (identifier) @variable)
+(def_value_decl
+  (identifier) @variable)
 
 (call_expression
-  callee: (identifier) @function)
+  (identifier) @function)
 
-(member_expression
-  field: (identifier) @property)
+(field_access
+  (identifier) @property)
+
+(safe_access
+  (identifier) @property)
 
 (parameter
-  name: (identifier) @variable.parameter)
+  (identifier) @variable.parameter)
 
-(static_parameter
-  name: (identifier) @type)
+(type_param
+  (identifier) @type)
 
 (named_type
-  name: (identifier) @type)
+  (identifier) @type)
 
 (dot_identifier
-  name: (identifier) @variant)
+  (identifier) @variant)
 
-(dot_pattern
-  name: (identifier) @variant)
+(variant_pattern
+  (dot_identifier) @variant)
 
-(struct_field
-  name: (identifier) @property)
+(struct_field_type
+  (identifier) @property)
+
+(field_init
+  (identifier) @property)
 
 (struct_pattern_field
-  name: (identifier) @property)
+  (identifier) @property)
 
 (use_field
-  local: (identifier) @variable)
-
-(use_field
-  source: (identifier) @variable)
+  (identifier) @variable)
 
 ; Keywords
 [
   "def"
   "defmacro"
   "use"
-  "doc"
-  "label"
-  "static"
+  "pub"
+  "let"
+  "return"
+  "break"
+  "continue"
+  "if"
+  "then"
+  "else"
+  "cases"
+  "loop"
+  "while"
+  "do"
+  "union"
+  "enum"
+  "interface"
+  "builtin"
 ] @keyword
 
 ; Operators and punctuation
@@ -84,6 +98,14 @@
   "/"
   "%"
   ".."
+  "?:"
+  "?."
+  "!!"
+  "++"
+  "--"
+  "!"
+  "'"
+  "~"
 ] @operator
 
 [

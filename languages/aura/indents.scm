@@ -1,7 +1,8 @@
-(block_expression "}" @end) @indent
-(multi_arm_expression "}" @end) @indent
-(list_expression "]" @end) @indent
-(dict_expression "]" @end) @indent
-(tuple_expression ")" @end) @indent
-(struct_expression ")" @end) @indent
-(function_declaration (block_expression "}" @end) @indent)
+(block "}" @end) @indent
+(closure "}" @end) @indent
+(cases_expr "}" @end) @indent
+(list "]" @end) @indent
+(dict "]" @end) @indent
+(tuple ")" @end) @indent
+(struct_literal ")" @end) @indent
+(def_fn_decl (block "}" @end) @indent)
